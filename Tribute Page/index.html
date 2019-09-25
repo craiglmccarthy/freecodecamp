@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dieter Rams - Tribute Page</title>
+    <style>
+      html {
+        font-size: 10px;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+      }
+
+      header {
+        min-height: 8vh;
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      a:link {
+        color: grey;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: grey;
+      }
+
+      a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: white;
+      }
+
+      .last-p {
+        padding-bottom: 25px;
+      }
+
+      #title {
+        padding: 15px 15px;
+        width: 10px;
+        font-weight: normal;
+        line-height: 3rem;
+      }
+
+      #image {
+        width: 100vw;
+        min-height: 30vh;
+        object-fit: cover;
+        max-width: 100%;
+        display: block;
+      }
+
+      #img-caption {
+        max-width: 60vw;
+        margin: auto;
+        font-size: 1.5rem;
+        padding: 0.8rem;
+        text-align: center;
+        margin-bottom: 1.8rem;
+        line-height: 2rem;
+        color: #2b2b2b;
+      }
+
+      #tribute-info {
+        max-width: 60vw;
+        padding: 3rem 0rem;
+        margin: auto;
+      }
+
+      #tribute-info h2 {
+        padding-bottom: 20px;
+      }
+
+      #tribute-info h3 {
+        padding-bottom: 10px;
+        padding-top: 25px;
+      }
+
+      .design-images {
+        width: 100%;
+        margin: auto;
+        position: relative;
+      }
+
+      .design-img {
+        padding: 30px;
+        display: block;
+        margin: auto;
+        width: 90%;
+      }
+
+      .design-img-caption-left {
+        position: absolute;
+        text-align: right;
+        width: 100px;
+        top: 40%;
+        left: -100px;
+        font-size: 2rem;
+        font-weight: bold;
+        padding-left: 5px;
+      }
+
+      .design-img-caption-right {
+        position: absolute;
+        width: 100px;
+        top: 40%;
+        right: -110px;
+        font-size: 2rem;
+        font-weight: bold;
+        padding-right: 5px;
+      }
+
+      #footer {
+        background-color: #2b2b2b;
+        color: white;
+      }
+
+      #credit-container {
+        margin: auto;
+        max-width: 450px;
+        padding: 25px;
+      }
+
+      #credit-title {
+        padding: 10px 0 15px 0;
+        font-size: 2rem;
+      }
+      /*-----Media queries start here-----*/
+
+      @media (max-width: 460px) {
+        body {
+          line-height: 2rem;
+        }
+        h1 {
+          font-size: 3rem;
+          line-height: 1.2;
+        }
+        #img-caption {
+          max-width: 85vw;
+          text-align: left;
+          font-size: 1.2rem;
+        }
+        #tribute-info {
+          max-width: 85vw;
+          font-size: 1.5rem;
+          padding: 2vw;
+        }
+        .design-img {
+          padding: 0;
+          padding-top: 15px;
+          display: block;
+        }
+        .design-img-caption-left {
+          position: relative;
+          width: 100%;
+          left: 0;
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          padding-top: 5px;
+        }
+        .design-img-caption-right {
+          position: relative;
+          width: 100%;
+          right: 0;
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          padding-top: 5px;
+        }
+        #credit-container {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="main">
+      <header>
+        <h1 id="title">Dieter Rams</h1>
+      </header>
+      <figure id="img-div">
+        <img
+          id="image"
+          src="assets/1_nMNVg1WDc8vIg_cXUwm4tg.png"
+          alt="Dieter Rams"
+        />
+        <figcaption id="img-caption">
+          As head of design at Braun, Dieter Rams (1932-) emerged as one of the
+          most influential industrial designers of the late 20th century.
+        </figcaption>
+      </figure>
+      <article id="tribute-info">
+        <h2>Timeline</h2>
+        <h3 class="timeline-date">1932</h3>
+        <p>Born in Weisbaden, Germany</p>
+        <h3 class="timeline-date">1947</h3>
+        <p>
+          Enrols on the architecture and interior design course at Wiesbaden
+          School of Art, but interrupts his studies the following year to
+          complete a carpentry apprenticeship
+        </p>
+        <h3 class="timeline-date">1953</h3>
+        <p>
+          Graduates from Wiesbaden and joins the architectural offices of Otto
+          Appel, then working with the US firm Skidmore Owings & Merrill, in
+          Frankfurt
+        </p>
+        <h3 class="timeline-date">1955</h3>
+        <p>Employed by Braun as an architect and interior designer</p>
+        <h3 class="timeline-date">1956</h3>
+        <p>
+          Works on the development of the SK4 record player — dubbed ‘Snow
+          White’s Coffin’ because of its radical transparent plastic lid — with
+          Hans Gugelot
+        </p>
+        <h3 class="timeline-date">1957</h3>
+        <p>
+          Develops the modular Atelier 1 series with L1 speakers separated from
+          the receiver unit, an innovation that soon became an industry standard
+          Begins work on the design of the modular 606 storage system for the
+          furniture manufacturer Vitsœ+Zapf Braun wins the prestigious Grand
+          Prix at the 11th Triennale in Milan
+        </p>
+        <h3 class="timeline-date">1958</h3>
+        <p class="last-p">
+          Another industry standard is set when the L2 loudspeaker is mounted on
+          a metal stand Launch of the <strong>T3/4/41</strong>, the first pocket
+          sized transistor radio in Germany, designed in the form of a slim flat
+          cube
+        </p>
+        <figure class="design-images">
+          <img
+            class="design-img"
+            src="assets/upload-eac74610-da04-11e4-89ba-cd8d0b2f94bf.jpg"
+            alt="Braun T 3"
+          />
+          <figcaption class="design-img-caption-left">
+            Braun T 3
+            <br />
+            HfG Ulm + Dieter Rams <br />
+            1958
+            <br />
+          </figcaption>
+        </figure>
+
+        <h3 class="timeline-date">1960</h3>
+        <p>
+          Develops the electrostatic LE1 loudspeaker covered with a large, light
+          membrane
+        </p>
+
+        <h3 class="timeline-date">1962</h3>
+        <p>
+          Appointed director of design at Braun
+          <br />
+          Develops the Audio 1 system of interchangeable units to be combined as
+          the user wishes — the dimensions of each unit matching those of the
+          606
+        </p>
+
+        <h3 class="timeline-date">1963</h3>
+        <p class="last-p">
+          Design of the <strong>T1000</strong> World Receiver as the first 'all
+          wave' portable radio with unlimited reception and the TG60, Braun’s
+          first tape recorder
+        </p>
+
+        <figure class="design-images">
+          <img
+            class="design-img"
+            src="assets/upload-095ff5e0-d9fb-11e4-89ba-cd8d0b2f94bf.jpg"
+            alt="Braun T 1000 CD"
+          />
+          <figcaption class="design-img-caption-right">
+            Braun T 1000 CD
+            <br />1968
+          </figcaption>
+        </figure>
+
+        <h3 class="timeline-date">1965</h3>
+        <p>
+          To mark the development of high fidelity technology, Rams replaces the
+          white and grey colour coding of Braun’s products with a new black base
+          in the Studio 1000 hi-fi system
+        </p>
+
+        <h3 class="timeline-date">1968</h3>
+        <p>
+          Development of one of Rams’ favourite products, the Cylindric T2
+          cigarette lighter with a newly invented magnetic ignition device
+        </p>
+
+        <h3 class="timeline-date">1970</h3>
+        <p>
+          Completes work on the TG 1000 tape recorder
+        </p>
+
+        <h3 class="timeline-date">1971</h3>
+        <p>
+          Designs the Phase 1 desk alarm clock for Braun, the first of a series
+          of clocks, watches and clock radios to be developed for the company
+        </p>
+
+        <h3 class="timeline-date">1977</h3>
+        <p class="last-p">
+          Works with Dietrich Lubs on the design of the
+          <strong>ET22</strong> pocket calculator, which will be refined as the
+          ET33, ET44, ET66 and ET88
+        </p>
+
+        <figure class="design-images">
+          <img
+            class="design-img"
+            src="assets/upload-13702f30-d9fd-11e4-9301-3dba31e8fcaa.jpg"
+            alt="ET 55 control LCD"
+          />
+          <figcaption class="design-img-caption-left">
+            ET 55 control LCD
+            <br />
+            Dieter Rams + Dietrich Lubs <br />
+            1983
+          </figcaption>
+        </figure>
+
+        <h3 class="timeline-date">1979</h3>
+        <p>
+          Development of the Studiomaster 2150 loudspeaker column of six
+          speakers together with Peter Schneider and Peter Hartwein
+        </p>
+
+        <h3 class="timeline-date">1980</h3>
+        <p>
+          Exhibition of Dieter Rams’ work Design: Dieter Rams and publication of
+          the book with the same title
+        </p>
+
+        <h3 class="timeline-date">1985</h3>
+        <p>
+          Collaborates with Angela Knoop on the design of a set of door handles
+          in alu cast and thermoplast for FSB
+        </p>
+
+        <h3 class="timeline-date">1995</h3>
+        <p>
+          Rams leaves his position of Director of Design at Braun and is
+          succeeded by Peter Schneider. Following this, Rams becomes Executive
+          Director of Corporate Identity Affairs at Braun.
+        </p>
+
+        <h3 class="timeline-date">1997</h3>
+        <p class="last-p">
+          Rams retires from Braun and his position as professors at Hochschule
+          für bildended Künste.
+        </p>
+      </article>
+
+      <footer id="footer">
+        <div id="credit-container">
+          <div id="credit-title">
+            <h3>Credits</h3>
+          </div>
+          <div>
+            Text and more information available from here:
+          </div>
+          <div>
+            <a
+              href="https://designmuseum.org/designers/dieter-rams"
+              id="tribute-link"
+              target="_blank"
+              >Dieter Rams - Design Museum</a
+            ><br /><br />
+            <div>Images:</div>
+            <a
+              href="https://medium.com/cheval-de-troie/10-grands-principes-du-design-par-dieter-rams-52043235c942"
+              target="_blank"
+              >10 grands principes du design par Dieter Rams</a
+            ><br />
+            <a
+              href="https://readymag.com/shuffle/dieter-rams/products/"
+              target="_blank"
+              >Dieter Rams: 10 Principles for Good Design</a
+            >
+            <br /><br />
+            <strong
+              >This page is for demonstrative and educational purposes
+              only.</strong
+            ><br />
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
