@@ -1,5 +1,3 @@
-# freeCodeCamp projects
-
 ## Responsive Web Design Projects
 
 ### Tribute Page screenshot:
