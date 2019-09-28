@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jazz - Survey Form</title>
+    <style>
+      html {
+        font-size: 10px;
+        background-color: #161817;
+        font-family: "EB Garamond", serif;
+      }
+
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      footer {
+        height: 100px;
+      }
+
+      #logo-container {
+        position: relative;
+        height: 160px;
+        background-color: #161817;
+        padding: 20px 40px 0 0;
+        margin-bottom: 40px;
+      }
+
+      #title {
+        position: relative;
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-weight: 500;
+        font-size: 78px;
+        text-align: right;
+        color: #ffffff;
+      }
+
+      #subtitle {
+        position: absolute;
+        right: 0;
+        top: 65px;
+        font-family: "EB Garamond", serif;
+        font-weight: 500;
+        font-size: 36px;
+        color: #c4c4c4;
+      }
+
+      #logo-line {
+        position: absolute;
+        background-color: #da1c58;
+        width: 6px;
+        height: 160px;
+        right: 225px;
+        top: 0;
+      }
+
+      #triangle {
+        position: absolute;
+        left: -100px;
+        top: 20%;
+        width: 0;
+        height: 0;
+        border-top: 250px solid transparent;
+        border-left: 40px solid #da1c58;
+        border-bottom: 250px solid transparent;
+      }
+
+      .row {
+        position: relative;
+        margin: 25px;
+      }
+
+      #form-outer {
+        font-size: 2rem;
+        position: relative;
+        margin: auto;
+        padding: 10px;
+        min-width: 200px;
+        max-width: 800px;
+        border: #ffffff solid 6px;
+        color: #ffffff;
+        background-color: #161817;
+      }
+
+      #description {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .left {
+        display: inline-block;
+        text-align: right;
+        width: 50%;
+        padding: 0 25px 0 0;
+        vertical-align: top;
+        margin-top: 10px;
+      }
+
+      .right {
+        display: inline-block;
+        text-align: left;
+        width: 48%;
+        vertical-align: middle;
+        position: relative;
+        top: 5px;
+      }
+
+      .input-field {
+        font-family: "EB Garamond", serif;
+        font-size: 1.5rem;
+        padding: 3px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        padding: 5px 5px 5px 10px;
+        min-width: 300px;
+      }
+
+      .radio,
+      .checkbox {
+        position: relative;
+        left: -40px;
+        display: block;
+        padding: 10px;
+        width: 300px;
+      }
+
+      .frequency,
+      input[type="checkbox"] {
+        position: relative;
+        top: 8px;
+        float: left;
+        margin-right: 5px;
+      }
+
+      #other {
+        display: block;
+        margin: 5px;
+      }
+
+      .dropdown {
+        font-family: "EB Garamond", serif;
+        font-size: 1.5rem;
+        padding: 3px;
+        font-weight: bold;
+        position: relative;
+        top: 8px;
+        float: left;
+        margin-right: 5px;
+      }
+
+      #comments {
+        padding: 5px 5px 5px 10px;
+        min-width: 300px;
+        height: 100px;
+      }
+
+      #submit-container {
+        padding: 50px;
+      }
+
+      #submit {
+        display: block;
+        margin: auto;
+        background-color: #da1c58;
+        font-family: "EB Garamond", serif;
+        border-radius: 8px;
+        color: white;
+        font-size: 1em;
+        height: 35px;
+        width: 120px;
+        border: 0px solid;
+      }
+      /*-----Media queries start here-----*/
+
+      @media (max-width: 460px) {
+        #logo-container {
+          margin-bottom: 0;
+        }
+        #form-outer {
+          border: #ffffff solid 0;
+        }
+        input[type="text"],
+        input[type="email"] {
+          padding: 5px 5px 5px 10px;
+          min-width: 0;
+        }
+        #other {
+          position: absolute;
+          left: 0;
+          top: -20px;
+          width: 160px;
+          margin: 5px;
+        }
+        #comments {
+          min-width: 160px;
+        }
+        .radio,
+        .checkbox {
+          width: 150px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo-container">
+        <div id="logo-line"></div>
+        <h1 id="title">JAZZ<br /><span id="subtitle">survey</span></h1>
+      </div>
+    </header>
+
+    <div id="form-outer">
+      <div id="triangle"></div>
+      <p id="description">
+        Please complete our jazz survey to provide valuable feedback.
+      </p>
+      <form id="survey-form">
+        <div class="row">
+          <div class="left">
+            <label id="name-label" for="name">* Name: </label>
+          </div>
+          <div class="right">
+            <input
+              autofocus
+              type="text"
+              name="name"
+              id="name"
+              class="input-field"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="left">
+            <label id="email-label" for="email">* Email: </label>
+          </div>
+          <div class="right">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="input-field"
+              required
+              placeholder="Enter your Email"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="left">
+            <label id="number-label" for="number">* Age: </label>
+          </div>
+          <div class="right">
+            <input
+              type="number"
+              name="age"
+              id="number"
+              min="1"
+              max="125"
+              class="input-field"
+              placeholder=" "
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="left">
+            <label for="frequency-listen"
+              >How often do you listen to jazz?</label
+            >
+          </div>
+          <div class="right">
+            <ul style="list-style: none;">
+              <li class="radio">
+                <label
+                  >Daily
+                  <input
+                    name="radio-buttons"
+                    value="1"
+                    type="radio"
+                    class="frequency"
+                  />
+                </label>
+              </li>
+              <li class="radio">
+                <label
+                  >Weekly
+                  <input
+                    name="radio-buttons"
+                    value="2"
+                    type="radio"
+                    class="frequency"
+                  />
+                </label>
+              </li>
+              <li class="radio">
+                <label
+                  >Monthly
+                  <input
+                    name="radio-buttons"
+                    value="3"
+                    type="radio"
+                    class="frequency"
+                  />
+                </label>
+              </li>
+              <li class="radio">
+                <label
+                  >Never
+                  <input
+                    name="radio-buttons"
+                    value="1"
+                    type="radio"
+                    class="frequency"
+                  />
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="left">
+            <label for="preferences"
+              >Do you have any favourite jazz subgenres? <br />(Check all that
+              apply)
+            </label>
+          </div>
+          <div class="right">
+            <ul id="preferences" style="list-style: none;">
+              <li class="checkbox">
+                <label>
+                  <input
+                    name="prefer"
+                    value="1"
+                    type="checkbox"
+                    class="frequency"
+                  />Big Band / Swing</label
+                >
+              </li>
+              <li class="checkbox">
+                <input
+                  name="prefer"
+                  value="2"
+                  type="checkbox"
+                  class="frequency"
+                />Dixieland
+              </li>
+              <li class="checkbox">
+                <label>
+                  <input
+                    name="prefer"
+                    value="3"
+                    type="checkbox"
+                    class="frequency"
+                  />Blues</label
+                >
+              </li>
+              <li class="checkbox">
+                <label>
+                  <input
+                    name="prefer"
+                    value="4"
+                    type="checkbox"
+                    class="frequency"
+                  />Bebop</label
+                >
+              </li>
+              <li class="checkbox">
+                <label>
+                  <input
+                    name="prefer"
+                    value="5"
+                    type="checkbox"
+                    class="frequency"
+                  />Vocal</label
+                >
+              </li>
+              <li class="checkbox">
+                <label>
+                  <input
+                    name="prefer"
+                    value="6"
+                    type="checkbox"
+                    class="frequency"
+                  />Postmodern</label
+                >
+              </li>
+              <li class="checkbox">
+                <label>
+                  <input
+                    name="prefer"
+                    value="7"
+                    type="checkbox"
+                    class="frequency"
+                  />Funk</label
+                >
+              </li>
+              <li class="checkbox">
+                <label>
+                  <input
+                    name="prefer"
+                    value="8"
+                    type="checkbox"
+                    class="frequency"
+                  />Afro-Cuban</label
+                >
+              </li>
+              <li class="checkbox">
+                <label>
+                  <input
+                    name="prefer"
+                    value="9"
+                    type="checkbox"
+                    class="frequency"
+                  />Other (please specify below)</label
+                >
+              </li>
+            </ul>
+            <div class="right">
+              <input type="text" name="other" id="other" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="left">
+            <label for="dropdown"
+              >Should there be more public support for jazz?</label
+            >
+          </div>
+          <div class="right">
+            <select id="dropdown" name="publicSupport" class="dropdown">
+              <option disabled value>Select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="dont-know">I don't know</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="left">
+            <label for="comments">Any comments or suggestions?</label>
+          </div>
+          <div class="right">
+            <textarea
+              id="comments"
+              class="input-field"
+              name="comment"
+              placeholder="Enter your comments or suggestions here"
+            ></textarea>
+          </div>
+        </div>
+        <div id="submit-container">
+          <button id="submit" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <footer></footer>
+  </body>
+</html>
