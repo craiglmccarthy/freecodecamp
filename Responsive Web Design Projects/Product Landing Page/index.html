@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Martel|News+Cycle|Open+Sans|Raleway&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vostok watches</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      header {
+        position: fixed;
+        background-color: #ffffff;
+        z-index: 1;
+        width: 100%;
+        height: 100px;
+        box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Martel", serif;
+      }
+
+      p {
+        padding: 30px 0 30px 0;
+        line-height: 30px;
+      }
+
+      a:link {
+        color: #7d7d7d;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: #7d7d7d;
+      }
+
+      a:hover {
+        color: #c00000;
+      }
+
+      a:active {
+        color: #c00000;
+      }
+
+      #header-img {
+        position: absolute;
+        top: -50px;
+        left: 10px;
+      }
+
+      #navbar-text {
+        font-family: "News Cycle", sans-serif;
+        position: absolute;
+        top: 38px;
+        left: 200px;
+        font-family: News Cycle;
+        font-size: 24px;
+        line-height: 39px;
+        text-align: center;
+        color: #c00000;
+      }
+
+      #nav-bar {
+        position: relative;
+        top: 40px;
+        right: 50px;
+        float: right;
+        font-family: "Raleway", sans-serif;
+        color: #7d7d7d;
+      }
+
+      #nav-bar li {
+        display: inline;
+        list-style: none;
+        padding: 15px;
+      }
+
+      #history {
+        position: absolute;
+        /*HACKY BECAUSE OF THE FIXED HEADER*/
+        top: -200px;
+      }
+
+      main {
+        position: relative;
+        /*background-color: pink; /*USEFUL FOR TEMP LAYOUT*/
+        padding: 50px 20px 25px 20px;
+        top: 100px;
+        width: 900px;
+        margin: auto;
+      }
+
+      iframe {
+        width: 100%;
+        padding: 40px 20px 20px 20px;
+        height: 500px;
+      }
+
+      #collection-content {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: calc(100% / 3);
+        margin: 10px;
+      }
+
+      .product a:hover {
+        opacity: 0.6;
+      }
+
+      #collection {
+        /*Fixes problem with fixed navbar*/
+        position: relative;
+        bottom: 125px;
+      }
+
+      #contact {
+        color: #7d7d7d;
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 10px;
+      }
+
+      footer {
+        margin: 25px 0 25px 0;
+      }
+
+      hr {
+        background-color: #7d7d7d;
+        border-style: none;
+        height: 2px;
+      }
+
+      #credits {
+        font-size: 0.8rem;
+      }
+
+      .email-submit {
+        display: block;
+        width: 260px;
+        margin: auto;
+        justify-items: right;
+      }
+
+      .email-submit input[type="email"] {
+        margin: 0;
+        width: 180px;
+        padding: 5px;
+      }
+
+      .email-submit input[type="submit"] {
+        margin: 0;
+        width: 70px;
+        padding: 7px;
+        border-style: none;
+        color: #ffffff;
+        background-color: #7d7d7d;
+      }
+      /*-----Media queries----- */
+
+      @media (max-width: 650px) {
+        header {
+          position: relative;
+          height: 100px;
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+          border-bottom: #000000 solid 2px;
+        }
+        #nav-bar {
+          position: relative;
+          float: none;
+          text-align: center;
+          top: 100px;
+          width: 100vw;
+          left: -20px;
+          right: 0px;
+        }
+        #nav-bar li {
+          display: block;
+          list-style: none;
+        }
+        #history {
+          position: absolute;
+          top: 0;
+        }
+        main {
+          border-top: #000000 solid 2px;
+          position: relative;
+          width: 100%;
+          top: 160px;
+        }
+        iframe {
+          height: 400px;
+          padding: 20px 0 20px 0;
+        }
+        #collection-content {
+          flex-direction: column;
+        }
+        .product {
+          max-width: 300px;
+          width: 100%;
+          margin: 0 auto;
+          margin-bottom: 50px;
+        }
+        #collection {
+          /*Fixes problem with fixed navbar*/
+          position: relative;
+          bottom: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header-container">
+      <header id="header">
+        <div id="navbar-logo">
+          <img
+            id="header-img"
+            src="assets/vostok-1-logo-png-transparent.png"
+            height="200"
+            alt="Vostok logo"
+          />
+          <div id="navbar-text">watches</div>
+        </div>
+        <nav id="nav-bar">
+          <ul>
+            <li><a href="#history" class="nav-link">History</a></li>
+            <li><a href="#collection" class="nav-link">Collection</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <main>
+      <h1 id="history"></h1>
+      <h1>History</h1>
+      <p>
+        The Vostok Watch Makers company was founded in 1942 when one of the
+        Moscow watch-making plants of the First Moscow Watch Factory was
+        evacuated to Chistopol, a small town located on the Kama River in
+        Tatarstan. Only defence equipment was produced during the war years, but
+        as soon as the war was over the company started making mechanical wrist
+        watches. However, the company did not begin using the "Vostok" brand
+        name until the 1960s. Presumably, the "Vostok" brand was named after the
+        Vostok space programme, as were some other soviet watch brands, namely
+        Poljot and Raketa. The company was appointed an official supplier of
+        watches for the Ministry of Defence of the Soviet Union in 1965. This
+        year also marks the creation of the well known Komandirskie
+        ("Commander's") watch. The experience gained through development of the
+        army watch led to the Amphibia, a stainless-steel diving watch able to
+        withstand a 200-metre depth (20atm). By 1980, Vostok Watch Makers was
+        producing 4.5 million timepieces per year.
+      </p>
+      <iframe
+        id="video"
+        src="https://www.youtube-nocookie.com/embed/kwZBt1DyhQ0?rel=0&amp;controls=0&amp;showinfo=0"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <p>
+        Watches sold to the military were marked "ЗАКАЗ МО СССР", meaning
+        "Ordered by the Ministry of Defence of the USSR". These models were sold
+        exclusively through Voentorg stores, which catered to military personnel
+        with identification only. Today, these models have become sought-after
+        collectibles.
+      </p>
+      <h1 id="collection"></h1>
+      <h1>Collection</h1>
+
+      <section id="collection-content">
+        <div class="product" id="1">
+          <a href="#">
+            <img
+              class="watch"
+              src="assets/810AQtvwW6L._UX679_.jpg"
+              height="350"
+              alt="Vostok watch"
+          /></a>
+        </div>
+        <div class="product" id="2">
+          <a href="#">
+            <img
+              class="watch"
+              src="assets/91XGDy8Na9L._UX679_.jpg"
+              height="350"
+              alt="Vostok watch"
+          /></a>
+        </div>
+        <div class="product" id="3">
+          <a href="#"
+            ><img
+              class="watch"
+              src="assets/81-yPntK08L._UX679_.jpg"
+              height="375"
+              alt="Vostok watch"
+          /></a>
+        </div>
+      </section>
+      <footer>
+        <hr />
+        <h1 id="contact">Contact</h1>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <div class="email-submit">
+            <input
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
+              type="email"
+            />
+            <input type="submit" id="submit" class="btn" />
+          </div>
+        </form>
+        <p id="credits">
+          Credits:
+          <br />
+          Text - https://en.wikipedia.org/wiki/Vostok_watches <br />
+          Images - https://freebiesupply.com/logos/vostok-logo/ Amazon.com
+          <br />
+          This page is for demonstrative and educational purposes only.
+        </p>
+      </footer>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
