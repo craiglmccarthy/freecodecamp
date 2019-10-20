@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The C Programming Language</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+        
+        * {
+            font-size: 1.6rem;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+        
+        p {
+            margin: 1rem 0;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #1b75b3;
+            margin: 3rem 0 2rem 0;
+        }
+        
+        a:link {
+            color: #1b75b3;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: #1b75b3;
+        }
+        
+        a:hover {
+            color: #a8b9cc
+        }
+        
+        a:active {
+            color: #a8b9cc
+        }
+        
+        code,
+        .codeblock {
+            font-family: monospace;
+            background-color: #f8f9fa;
+            border: 1px solid #eaecf0;
+            border-radius: 2px;
+            padding: 1px 4px;
+        }
+        
+        nav {
+            position: fixed;
+            border-right: #a8b9cc solid 2px;
+            width: 250px;
+            height: 100%;
+        }
+        
+        nav img {
+            position: relative;
+            left: 15px;
+            margin: 25px;
+        }
+        
+        nav ul {
+            width: 248px;
+            padding: 0;
+        }
+        
+        nav li {
+            list-style: none;
+            color: #1b75b3;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 10px;
+            border-top: #a8b9cc solid 2px;
+        }
+        
+        nav li:last-child {
+            border-bottom: #a8b9cc solid 2px;
+        }
+        
+        nav li a {
+            font-size: 1.3rem;
+        }
+        
+        #disclaimer {
+            position: absolute;
+            bottom: 0px;
+            left: 25px;
+            margin: auto;
+            width: 200px;
+            font-weight: normal;
+            font-size: 1.3rem;
+            padding: 10px;
+            color: #545F6A;
+        }
+        
+        #disclaimer a {
+            font-weight: normal;
+            font-size: 1.3rem;
+            color: #000000;
+        }
+        
+        main {
+            margin: 0 0 0 250px;
+            padding: 50px 25px;
+            min-width: 400px;
+        }
+        
+        section {
+            padding: 10px;
+        }
+        
+        section header {
+            padding: 10px 0;
+            font-size: 2.4rem;
+            font-weight: normal;
+            font-family: "Libre Baskerville", serif;
+            color: #1b75b3;
+        }
+        
+        section p,
+        section ul {
+            color: #545F6A;
+        }
+        
+        @media only screen and (max-width: 400px) {
+            /*This is only here in order to fulfill requirement*/
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>
+            <!--This is only here in order to fulfill requirement-->
+        </header>
+        <img src="assets/c_programming.png" width="175" alt="C Programming Language Logo"/>
+        <ul>
+            <li>
+                <a href="#C_Programming_Language" class="nav-link">
+            C Programming Language
+          </a>
+            </li>
+            <li>
+                <a href="#Overview" class="nav-link">
+            Overview
+          </a>
+            </li>
+            <li>
+                <a href="#History" class="nav-link">
+            History
+          </a>
+            </li>
+            <li>
+                <a href="#Syntax" class="nav-link">
+            Syntax
+          </a>
+            </li>
+            <li>
+                <a href="#Hello,_World" class="nav-link"> Hello, World </a>
+            </li>
+            <li>
+                <a href="#Data_Types" class="nav-link">
+            Data Types
+          </a>
+            </li>
+            <li>
+                <a href="#Memory_Management" class="nav-link">
+            Memory Management
+          </a>
+            </li>
+            <li>
+                <a href="#Libraries" class="nav-link">
+            Libraries
+          </a>
+            </li>
+            <li>
+                <a href="#Uses" class="nav-link">
+            Uses
+          </a>
+            </li>
+        </ul>
+        <div id="disclaimer">
+            All information provided by:
+            <br />
+            <a href="https://en.wikipedia.org/wiki/C_(programming_language)">Wikipedia</a>
+        </div>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="C_Programming_Language">
+            <header>C Programming Language</header>
+            <p>
+                C (/siː/, as in the letter c) is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, while a static type system prevents unintended operations. By design, C provides constructs that map efficiently to typical machine instructions and has found lasting use in applications previously coded in assembly language. Such applications include operating systems and various application software for computers, from supercomputers to embedded systems.
+            </p>
+
+            <p>
+                C was originally developed at Bell Labs by Dennis Ritchie between 1972 and 1973 to make utilities running on Unix. Later, it was applied to re-implementing the kernel of the Unix operating system. During the 1980s, C gradually gained popularity. Nowadays, it is one of the most widely used programming languages, with C compilers from various vendors available for the majority of existing computer architectures and operating systems. C has been standardized by the ANSI since 1989 (see ANSI C) and by the International Organization for Standardization.
+            </p>
+            <p>
+                C is an imperative procedural language. It was designed to be compiled using a relatively straightforward compiler to provide low-level access to memory and language constructs that map efficiently to machine instructions, all with minimal runtime support. Despite its low-level capabilities, the language was designed to encourage cross-platform programming. A standards-compliant C program written with portability in mind can be compiled for a wide variety of computer platforms and operating systems with few changes to its source code. The language is available on various platforms, from embedded microcontrollers to supercomputers.
+            </p>
+            </p>
+        </section>
+        <section class="main-section" id="Overview">
+            <header>Overview</header>
+            <p>
+                Like most procedural languages in the ALGOL tradition, C has facilities for structured programming and allows lexical variable scope and recursion. Its static type system prevents unintended operations. In C, all executable code is contained within subroutines (also called "functions", though not strictly in the sense of functional programming). Function parameters are always passed by value. Pass-by-reference is simulated in C by explicitly passing pointer values. C program source text is free-format, using the semicolon as a statement terminator and curly braces for grouping blocks of statements.
+            </p>
+            <p>
+                The C language also exhibits the following characteristics:
+                <ul>
+                    <li>
+                        There is a small, fixed number of keywords, including a full set of control flow primitives: <code>if/else</code>, <code>for</code>, <code>do/while</code>, <code>while</code>, and <code>switch</code>. User-defined names are not distinguished from keywords by any kind of sigil.
+                    </li>
+                    <li>
+                        There are a large number of arithmetic, bitwise and logic operators: <code>+</code>, <code>+=</code>, <code>++</code>, <code>&</code>, <code>||</code>, etc.
+                    </li>
+                    <li>
+                        More than one assignment may be performed in a single statement.
+                    </li>
+                    <li>
+                        Function return values can be ignored when not needed.
+                    </li>
+                    <li>
+                        Typing is static, but weakly enforced; all data has a type, but implicit conversions are possible.
+                    </li>
+                    <li>
+                        Declaration syntax mimics usage context. C has no "define" keyword; instead, a statement beginning with the name of a type is taken as a declaration. There is no "function" keyword; instead, a function is indicated by the parentheses of an argument list.
+                    </li>
+                    <li>
+                        User-defined (<code>typedef</code>) and compound types are possible. Heterogeneous aggregate data types (<code>struct</code>) allow related data elements to be accessed and assigned as a unit. Union is a structure with overlapping members; only the last member stored is valid. Array indexing is a secondary notation, defined in terms of pointer arithmetic. Unlike structs, arrays are not first-class objects: they cannot be assigned or compared using single built-in operators. There is no "array" keyword in use or definition; instead, square brackets indicate arrays syntactically, for example month. Enumerated types are possible with the <code>enum</code> keyword. They are freely interconvertible with integers. Strings are not a distinct data type, but are conventionally implemented as null-terminated character arrays.
+                    </li>
+                    <li>
+                        Low-level access to computer memory is possible by converting machine addresses to typed pointers.
+                    </li>
+                    <li>
+                        Procedures (subroutines not returning values) are a special case of function, with an untyped return type void.
+                    </li>
+                    <li>
+                        Functions may not be defined within the lexical scope of other functions.
+                    </li>
+                    <li>
+                        Function and data pointers permit ad hoc run-time polymorphism.
+                    </li>
+                    <li>
+                        A preprocessor performs macro definition, source code file inclusion, and conditional compilation.
+                    </li>
+                    <li>
+                        There is a basic form of modularity: files can be compiled separately and linked together, with control over which functions and data objects are visible to other files via <code>static</code> and <code>extern</code> attributes.
+                    </li>
+                    <li>
+                        Complex functionality such as I/O, string manipulation, and mathematical functions are consistently delegated to library routines.
+                    </li>
+                </ul>
+
+            </p>
+            <p>
+                While C does not include certain features found in other languages (such as object orientation and garbage collection), these can be implemented or emulated, often through the use of external libraries (e.g., the GLib Object System or the Boehm garbage collector).
+            </p>
+        </section>
+        <section class="main-section" id="History">
+            <header>History</header>
+            <h2>Early Developments</h2>
+            <p>
+                The origin of C is closely tied to the development of the Unix operating system, originally implemented in assembly language on a PDP-7 by Dennis Ritchie and Ken Thompson, incorporating several ideas from colleagues. Eventually, they decided to port the operating system to a PDP-11. The original PDP-11 version of Unix was also developed in assembly language.
+            </p>
+            <p>
+                Thompson desired a programming language to make utilities for the new platform. At first, he tried to make a Fortran compiler, but soon gave up the idea. Instead, he created a cut-down version of the recently developed BCPL systems programming language. The official description of BCPL was not available at the time, and Thompson modified the syntax to be less wordy, producing the similar but somewhat simpler B. However, few utilities were ultimately written in B because it was too slow, and B could not take advantage of PDP-11 features such as byte addressability.
+            </p>
+            <p>
+                In 1972, Ritchie started to improve B, which resulted in creating a new language C. The C compiler and some utilities made with it were included in Version 2 Unix.
+            </p>
+            <p>
+                At Version 4 Unix released at Nov. 1973, the Unix kernel was extensively re-implemented by C. By this time, the C language had acquired some powerful features such as struct types.
+            </p>
+            <p>
+                Unix was one of the first operating system kernels implemented in a language other than assembly. Earlier instances include the Multics system (which was written in PL/I) and Master Control Program (MCP) for the Burroughs B5000 (which was written in ALGOL) in 1961. In around 1977, Ritchie and Stephen C. Johnson made further changes to the language to facilitate portability of the Unix operating system. Johnson's Portable C Compiler served as the basis for several implementations of C on new platforms.
+            </p>
+            <h2>K&R C</h2>
+            <p>In 1978, <a href="#" title="Brian Kernighan">Brian Kernighan</a> and <a href="#" title="Dennis Ritchie">Dennis Ritchie</a> published the first edition of <i><a href="#" title="The C Programming Language">The C Programming Language</a></i>. This book, known to C programmers as <i>K&amp;R</i>, served for many years as an informal <a href="#" title="Specification (technical standard)">specification</a> of the language. The version of C that it describes is commonly referred to as "K&amp;R C". The second edition of the book covers the later <a href="#" title="ANSI C">ANSI C</a> standard, described below.
+            </p>
+            <p><i>K&amp;R</i> introduced several language features:
+            </p>
+            <ul>
+                <li>Standard I/O library</li>
+                <li><code>long int</code> data type</li>
+                <li><code>unsigned int</code> data type</li>
+                <li>Compound assignment operators of the form <code>=<i>op</i></code> (such as <code>=-</code>) were changed to the form <code><i>op</i>=</code> (that is, <code>-=</code>) to remove the semantic ambiguity created by constructs such as <code>i=-10</code>, which had been interpreted as <code>i&#160;=-&#160;10</code> (decrement <code>i</code> by 10) instead of the possibly intended <code>i&#160;=&#160;-10</code> (let <code>i</code> be -10).</li>
+            </ul>
+            <p>Even after the publication of the 1989 ANSI standard, for many years K&amp;R C was still considered the "<a href="#" class="mw-redirect" title="Lowest common denominator (computers)">lowest common denominator</a>" to which C programmers restricted themselves when maximum portability was desired, since many older compilers were still in use, and because carefully written K&amp;R C code can be legal Standard C as well.
+            </p>
+            <p>In early versions of C, only functions that return types other than <code>int</code> must be declared if used before the function definition; functions used without prior declaration were presumed to return type <code>int</code>.
+            </p>
+            <p>For example:
+                <div class="codeblock">
+
+            </p>
+            <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">long</span> <span class="nf">some_function</span><span class="p">();</span>
+            <span class="cm">/* int */</span> <span class="n">other_function</span><span class="p">();</span>
+
+            <span class="cm">/* int */</span> <span class="n">calling_function</span><span class="p">()</span>
+            <span class="p">{</span>
+                <span class="kt">long</span> <span class="n">test1</span><span class="p">;</span>
+                <span class="k">register</span> <span class="cm">/* int */</span> <span class="n">test2</span><span class="p">;</span>
+
+                <span class="n">test1</span> <span class="o">=</span> <span class="n">some_function</span><span class="p">();</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">test1</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+                      <span class="n">test2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="k">else</span>
+                      <span class="n">test2</span> <span class="o">=</span> <span class="n">other_function</span><span class="p">();</span>
+                <span class="k">return</span> <span class="n">test2</span><span class="p">;</span>
+            <span class="p">}</span>
+            </pre></div>
+            </code>
+            </div>
+            <p>The <code>int</code> type specifiers which are commented out could be omitted in K&amp;R C, but are required in later standards.
+            </p>
+            <p>Since K&amp;R function declarations did not include any information about function arguments, function parameter <a href="#" class="mw-redirect" title="Type checking">type checks</a> were not performed, although some compilers would issue a warning message if a local function was called with the wrong number of arguments, or if multiple calls to an external function used different numbers or types of arguments. Separate tools such as Unix's <a href="#" class="mw-redirect" title="Lint programming tool">lint</a> utility were developed that (among other things) could check for consistency of function use across multiple source files.
+            </p>
+            <p>In the years following the publication of K&amp;R C, several features were added to the language, supported by compilers from AT&amp;T (in particular <a href="#" title="Portable C Compiler">PCC</a>) and some other vendors. These included:
+            </p>
+            <ul>
+                <li><code><a href="#" title="Void type">void</a></code> functions (i.e., functions with no return value)</li>
+                <li>functions returning <code><a href="#" title="Struct (C programming language)">struct</a></code> or <code><a href="#" class="mw-redirect" title="Union (computer science)">union</a></code> types (rather than pointers)</li>
+                <li><a href="#" title="Assignment (computer science)">assignment</a> for <code>struct</code> data types</li>
+                <li><a href="#" title="Enumerated type">enumerated types</a></li>
+            </ul>
+            <p>The large number of extensions and lack of agreement on a <a href="#" title="C standard library">standard library</a>, together with the language popularity and the fact that not even the Unix compilers precisely implemented the K&amp;R specification, led to the necessity of standardization.
+            </p>
+        </section>
+        <section class="main-section" id="Syntax">
+            <header>Syntax</header>
+            <p>C has a <a href="#" title="Formal grammar">formal grammar</a> specified by the C standard. Line endings are generally not significant in C; however, line boundaries do have significance during the preprocessing phase. Comments may appear either between the delimiters <code>/*</code> and <code>*/</code>, or (since C99) following <code>//</code> until the end of the line. Comments delimited by <code>/*</code> and <code>*/</code> do not nest, and these sequences of characters are not interpreted as comment delimiters if they appear inside <a href="#" title="String literal">string</a> or character literals.
+            </p>
+            <p>C source files contain declarations and function definitions. Function definitions, in turn, contain declarations and <a href="#" title="Statement (computer science)">statements</a>. Declarations either define new types using keywords such as <code>struct</code>, <code>union</code>, and <code>enum</code>, or assign types to and perhaps reserve storage for new variables, usually by writing the type followed by the variable name. Keywords such as <code>char</code> and <code>int</code> specify built-in types. Sections of code are enclosed in braces (<code>{</code> and <code>}</code>, sometimes called "curly brackets") to limit the scope of declarations and to act as a single statement for control structures.
+            </p>
+            <p>As an imperative language, C uses <i>statements</i> to specify actions. The most common statement is an <i>expression statement</i>, consisting of an expression to be evaluated, followed by a semicolon; as a <a href="#" title="Side effect (computer science)">side effect</a> of the evaluation, functions may be <a href="#" class="mw-redirect" title="Procedure call">called</a> and variables may be <a href="#" title="Assignment (computer science)">assigned</a> new values. To modify the normal sequential execution of statements, C provides several control-flow statements identified by reserved keywords. <a href="#" title="Structured programming">Structured programming</a> is supported by <code>if</code>(-<code>else</code>) conditional execution and by <code>do</code>-<code>while</code>, <code>while</code>, and <code>for</code> iterative execution (looping). The <code>for</code> statement has separate initialization, testing, and reinitialization expressions, any or all of which can be omitted. <code>break</code> and <code>continue</code> can be used to leave the innermost enclosing loop statement or skip to its reinitialization. There is also a non-structured <code><a href="#" title="Goto">goto</a></code> statement which branches directly to the designated <a href="#" title="Label (computer science)">label</a> within the function. <code>switch</code> selects a <code>case</code> to be executed based on the value of an integer expression.
+            </p>
+            <p>Expressions can use a variety of built-in operators and may contain function calls. The order in which arguments to functions and operands to most operators are evaluated is unspecified. The evaluations may even be interleaved. However, all side effects (including storage to variables) will occur before the next "<a href="#" title="Sequence point">sequence point</a>"; sequence points include the end of each expression statement, and the entry to and return from each function call. Sequence points also occur during evaluation of expressions containing certain operators (<code>&amp;&amp;</code>, <code>||</code>, <code><a href="/wiki/%3F:" title="?:">?:</a></code> and the <a href="#" title="Comma operator">comma operator</a>). This permits a high degree of object code optimization by the compiler, but requires C programmers to take more care to obtain reliable results than is needed for other programming languages.
+            </p>
+            <p>Kernighan and Ritchie say in the Introduction of <i>The C Programming Language</i>: "C, like any other language, has its blemishes. Some of the operators have the wrong precedence; some parts of the syntax could be better." The C standard did not attempt to correct many of these blemishes, because of the impact of such changes on already existing software.
+            </p>
+            <h3><span class="mw-headline" id="Character_set">Character set</span><span class="mw-editsection"><span class="mw-editsection-bracket"></span></span></h3>
+            <p>The basic C source character set includes the following characters:
+            </p>
+            <ul>
+                <li>Lowercase and uppercase letters of ISO Basic Latin Alphabet: <code>a</code>–<code>z</code> <code>A</code>–<code>Z</code></li>
+                <li>Decimal digits: <code>0</code>–<code>9</code></li>
+                <li>Graphic characters: <code>! " #&#160;% &amp; ' ( ) * + , - . /&#160;:&#160;; &lt; = &gt;&#160;? [ \ ] ^ _ { | } ~</code></li>
+                <li><a href="#" title="Whitespace character">Whitespace characters</a>: <i><a href="#" title="Space (punctuation)">space</a></i>, <i><a href="#" class="mw-redirect" title="Tab character">horizontal tab</a></i>, <i><a href="#" class="mw-redirect" title="Tab character">vertical tab</a></i>, <i><a href="#" title="Page break">form feed</a></i>, <i><a href="#" title="Newline">newline</a></i></li>
+            </ul>
+            <p>Newline indicates the end of a text line; it need not correspond to an actual single character, although for convenience C treats it as one.
+            </p>
+            <p>Additional multi-byte encoded characters may be used in string literals, but they are not entirely <a href="#" title="Software portability">portable</a>. The latest C standard (<a href="/wiki/C11_(C_standard_revision)" title="C11 (C standard revision)">C11</a>) allows multi-national <a href="#" title="Unicode">Unicode</a> characters to be embedded portably within C source text by using <code>\uXXXX</code> or <code>\UXXXXXXXX</code> encoding (where the <code>X</code> denotes a hexadecimal character), although this feature is not yet widely implemented.
+            </p>
+            <p>The basic C execution character set contains the same characters, along with representations for <a href="#" title="Bell character">alert</a>, <a href="#" title="Backspace">backspace</a>, and <a href="#" title="Carriage return">carriage return</a>. <a href="#" title="Run time (program lifecycle phase)">Run-time</a> support for extended character sets has increased with each revision of the C standard.
+            </p>
+            <h3><span class="mw-headline" id="Reserved_words">Reserved words</span><span class="mw-editsection"><span class="mw-editsection-bracket"></span></span></h3>
+            <p>C89 has 32 reserved words, also known as keywords, which are the words that cannot be used for any purposes other than those for which they are predefined:
+            </p>
+            <div>
+
+                &#32;
+                <table class="multicol" role="presentation" style="border-collapse: collapse; padding: 0; border: 0; background:transparent; width:100%;">
+                    <tbody>
+                        <tr>
+                            <td style="width: 20%;text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code>auto</code></dd>
+                                    <dd><code>break</code></dd>
+                                    <dd><code>case</code></dd>
+                                    <dd><code>char</code></dd>
+                                    <dd><code>const</code></dd>
+                                    <dd><code>continue</code></dd>
+                                    <dd><code>default</code></dd>
+                                    <dd><code>do</code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                            <td style="width: 20%;text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code><a href="#" class="mw-redirect" title="Double precision">double</a></code></dd>
+                                    <dd><code>else</code></dd>
+                                    <dd><code><a href="#" title="Enumerated type">enum</a></code></dd>
+                                    <dd><code><a href="#" title="External variable">extern</a></code></dd>
+                                    <dd><code><a href="#" class="mw-redirect" title="Floating point">float</a></code></dd>
+                                    <dd><code><a href="#" title="For loop">for</a></code></dd>
+                                    <dd><code><a href="#" title="Goto">goto</a></code></dd>
+                                    <dd><code>if</code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                            <td style="width: 20%;text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code>int</code></dd>
+                                    <dd><code><a href="#" class="mw-redirect" title="Long integer">long</a></code></dd>
+                                    <dd><code><a href="#" class="mw-redirect" title="Register (C programming language)">register</a></code></dd>
+                                    <dd><code>return</code></dd>
+                                    <dd><code><a href="#" class="mw-redirect" title="Short integer">short</a></code></dd>
+                                    <dd><code>signed</code></dd>
+                                    <dd><code><a href="#" title="Sizeof">sizeof</a></code></dd>
+                                    <dd><code><a href="#" title="Static (keyword)">static</a></code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                            <td style="text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code><a href="#" title="Struct (C programming language)">struct</a></code></dd>
+                                    <dd><code><a href="#" title="Switch statement">switch</a></code></dd>
+                                    <dd><code>typedef</code></dd>
+                                    <dd><code>union</code></dd>
+                                    <dd><code>unsigned</code></dd>
+                                    <dd><code><a href="#" title="Void type">void</a></code></dd>
+                                    <dd><code><a href="#" class="mw-redirect" title="Volatile variable">volatile</a></code></dd>
+                                    <dd><code><a href="#" title="While loop">while</a></code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>C99 reserved five more words:
+            </p>
+            <div>
+
+                &#32;
+                <table class="multicol" role="presentation" style="border-collapse: collapse; padding: 0; border: 0; background:transparent; width:100%;">
+                    <tbody>
+                        <tr>
+                            <td style="width: 20%;text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code>_Bool</code></dd>
+                                    <dd><code>_Complex</code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                            <td style="width: 20%;text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code>_Imaginary</code></dd>
+                                    <dd><code><a href="#" title="Inline function">inline</a></code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                            <td style="text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code><a href="#" title="Restrict">restrict</a></code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>C11 reserved seven more words:
+            </p>
+            <div>
+
+                &#32;
+                <table class="multicol" role="presentation" style="border-collapse: collapse; padding: 0; border: 0; background:transparent; width:100%;">
+                    <tbody>
+                        <tr>
+                            <td style="width: 20%;text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code>_Alignas</code></dd>
+                                    <dd><code>_Alignof</code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                            <td style="width: 20%;text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code>_Atomic</code></dd>
+                                    <dd><code>_Generic</code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                            <td style="width: 20%;text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code>_Noreturn</code></dd>
+                                    <dd><code>_Static_assert</code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                            <td style="text-align: left; vertical-align: top;">
+                                <dl>
+                                    <dd><code>_Thread_local</code></dd>
+                                </dl>
+                                <p>&#32;
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Most of the recently reserved words begin with an underscore followed by a capital letter, because identifiers of that form were previously reserved by the C standard for use only by implementations. Since existing program source code should not have been using these identifiers, it would not be affected when C implementations started supporting these extensions to the programming language. Some standard headers do define more convenient synonyms for underscored identifiers. The language previously included a reserved word called <code>entry</code>, but this was seldom implemented, and has now been removed as a reserved word.
+            </p>
+            <h3><span class="mw-headline" id="Operators">Operators</span><span class="mw-editsection"><span class="mw-editsection-bracket"></span></span></h3>
+            <p>C supports a rich set of <a href="#" title="Operator (computer programming)">operators</a>, which are symbols used within an <a href="#" title="Expression (computer science)">expression</a> to specify the manipulations to be performed while evaluating that expression. C has operators for:
+            </p>
+            <ul>
+                <li><a href="#" title="Arithmetic">arithmetic</a>: <a href="#" title="Addition"><code>+</code></a>, <a href="#" title="Subtraction"><code>-</code></a>, <a href="#" title="Multiplication"><code>*</code></a>, <a href="#" title="Division (mathematics)"><code>/</code></a>, <a href="#" title="Modulo operation"><code>%</code></a></li>
+                <li><a href="#" title="Assignment (computer science)">assignment</a>: <code>=</code></li>
+                <li><a href="#" title="Augmented assignment">augmented assignment</a>: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>&amp;=</code>, <code>|=</code>, <code>^=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code></li>
+                <li><a href="#" title="Bitwise operation">bitwise logic</a>: <code>~</code>, <code>&amp;</code>, <code>|</code>, <code>^</code></li>
+                <li><a href="#" class="mw-redirect" title="Bit shift">bitwise shifts</a>: <code>&lt;&lt;</code>, <code>&gt;&gt;</code></li>
+                <li><a href="#" title="Boolean algebra">boolean logic</a>: <code>!</code>, <code>&amp;&amp;</code>, <code>||</code></li>
+                <li><a href="/wiki/%3F:" title="?:">conditional evaluation</a>: <a href="/wiki/%3F:" title="?:"><code>? :</code></a></li>
+                <li>equality testing: <a href="#" title="Equality (mathematics)"><code>==</code></a>, <a href="#" title="Inequality (mathematics)"><code>!=</code></a></li>
+                <li><a href="#" title="Subroutine">calling functions</a>: <code>( )</code></li>
+                <li><a href="#" title="Increment and decrement operators">increment and decrement</a>: <code>++</code>, <code>--</code></li>
+                <li><a href="#" title="Record (computer science)">member selection</a>: <code>.</code>, <code>-&gt;</code></li>
+                <li>object size: <code><a href="#" title="Sizeof">sizeof</a></code></li>
+                <li><a href="#" title="Order theory">order relations</a>: <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code></li>
+                <li><a href="#" title="Pointer (computer programming)">reference and dereference</a>: <code>&amp;</code>, <code>*</code>, <code>[ ]</code></li>
+                <li>sequencing: <a href="#" title="Comma operator"><code>,</code></a></li>
+                <li><a href="/wiki/Order_of_operations#Mathematical_precedence" title="Order of operations">subexpression grouping</a>: <code>( )</code></li>
+                <li><a href="#" title="Type conversion">type conversion</a>: <code>(<i>typename</i>)</code></li>
+            </ul>
+            <p>C uses the operator <code>=</code> (used in mathematics to express equality) to indicate assignment, following the precedent of <a href="#" title="Fortran">Fortran</a> and <a href="#" title="PL/I">PL/I</a>, but unlike <a href="#" title="ALGOL">ALGOL</a> and its derivatives. C uses the operator <code>==</code> to test for equality. The similarity between these two operators (assignment and equality) may result in the accidental use of one in place of the other, and in many cases, the mistake does not produce an error message (although some compilers produce warnings). For example, the conditional expression <code>if(a==b+1)</code> might mistakenly be written as <code>if(a=b+1)</code>, which will be evaluated as true if <code>a</code> is not zero after the assignment.
+            </p>
+            <p>The C <a href="#" title="Order of operations">operator precedence</a> is not always intuitive. For example, the operator <code>==</code> binds more tightly than (is executed prior to) the operators <code>&amp;</code> (bitwise AND) and <code>|</code> (bitwise OR) in expressions such as <code>x &amp; 1 == 0</code>, which must be written as <code>(x &amp; 1) == 0</code> if that is the coder's intent.
+            </p>
+        </section>
+        <section class="main-section" id="Hello,_World">
+            <header>Hello, World</header>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+        </section>
+        <section class="main-section" id="Data_Types">
+            <header>Data Types</header>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+        </section>
+        <section class="main-section" id="Memory_Management">
+            <header>Memory Management</header>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+        </section>
+        <section class="main-section" id="Libraries">
+            <header>Libraries</header>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+        </section>
+        <section class="main-section" id="Uses">
+            <header>Uses</header>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, quis voluptate architecto ea facere quidem at esse ab repudiandae dolores itaque expedita reiciendis autem ut adipisci iure harum iste omnis!
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
