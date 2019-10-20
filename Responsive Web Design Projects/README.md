@@ -11,3 +11,7 @@
 ### Product Landing Page screenshot:
 
 ![Product Landing Page screenshot](/Responsive%20Web%20Design%20Projects/Product%20Landing%20Page/screencapture-127-0-0-1-5500-Responsive-Web-Design-Projects-Product-Landing-Page-index-html-2019-10-13-18_32_19.png)
+
+### Technical Documentation Page screenshot:
+
+![Technical Documentation Page screenshot](/Responsive%20Web%20Design%20Projects/Technical%20Documentation%20Page/screenshot.png)
