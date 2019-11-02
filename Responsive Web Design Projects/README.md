@@ -18,4 +18,4 @@
 
 ### Personal Portfolio Webpage screenshot:
 
-<img src="Screenshots/screenshot_technical.png" alt="Personal Portfolio Webpage screenshot" style="border: solid #000000 1px;" />
+<img src="Screenshots/personal_portfolio_screencapture.png" alt="Personal Portfolio Webpage screenshot" style="border: solid #000000 1px;" />
