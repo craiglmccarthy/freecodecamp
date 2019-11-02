@@ -15,3 +15,7 @@
 ### Technical Documentation Page screenshot:
 
 <img src="Screenshots/screenshot_technical.png" alt="Technical Documentation Page screenshot" style="border: solid #000000 1px;" />
+
+### Personal Portfolio Webpage screenshot:
+
+<img src="Screenshots/screenshot_technical.png" alt="Personal Portfolio Webpage screenshot" style="border: solid #000000 1px;" />
